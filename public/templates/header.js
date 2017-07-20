@@ -1,0 +1,1 @@
+(function(){dust.register("header",body_0);function body_0(chk,ctx){return chk.write("<header class=\"navbar navbar-inverse navbar-fixed-top\" role=\"navigation\"><div class=\"container\"><div class=\"navbar-header\"><span class=\"glyphicon glyphicon-search\"></span><a class=\"navbar-brand\" href=\"/\">Tastemade</a></div></div></header>");}return body_0;})();

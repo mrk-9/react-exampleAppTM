@@ -1,0 +1,35 @@
+<div class="container location-detail">
+    <div class="row">
+        <div role="main">
+
+            <section class="location-header">
+                <div class="header" style="background-image: url({data.location.fullScreen.url});">
+                    <h1>{data.location.name}</h1>
+                </div>
+                <p>{data.location.about}</p>
+            </section>
+
+            <h2 class="padding-10">Popular Videos</h2>
+            <ul class="list-unstyled videos-list">
+                {#data.videos}
+                    <li>
+                        <a href="/locations/{data.location.slug}/videos/{_id}/{slug}">
+                            <div class="thumbnail" style="background-image: url({thumbnail.url});">
+                                <h3>{title}</h3>
+                                <span class="glyphicon glyphicon-play-circle"></span>
+                            </div>
+                        </a>
+                        <small class="center-block byline clearfix">
+                            <a class="pull-right creator" target="_blank" href="{creator._webUrl}">
+                                <img src="{creator.avatar.url}" alt="{creator.about}" title="{creator.about}"/>
+                            </a>
+                            <p class="pull-right created">Shot {createdAtRelative} {?venue}at <a target="_blank" href="{venue._webUrl}">{venue.name}</a>{/venue} by</p>
+                            <p>{stats.views} views</p>
+                        </small>
+                    </li>
+                {/data.videos}
+            </ul>
+
+        </div>
+    </div>
+</div>

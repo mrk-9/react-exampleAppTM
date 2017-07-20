@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>
+            {?data.pageTitle}
+                {data.pageTitle} | Tastemade
+            {:else}
+                Tastemade
+            {/data.pageTitle}
+        </title>
+        <script>
+            /* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
+            window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.createElementNS||!t.document.createElementNS("http://www.w3.org/2000/svg","svg").createSVGRect||!document.implementation.hasFeature("http://www.w3.org/TR/SVG11/feature#Image","1.1")||window.opera&&-1===navigator.userAgent.indexOf("Chrome")),o=function(o){var r=t.document.createElement("link"),a=t.document.getElementsByTagName("script")[0];r.rel="stylesheet",r.href=e[o&&n?0:o?1:2],a.parentNode.insertBefore(r,a)},r=new t.Image;r.onerror=function(){o(!1)},r.onload=function(){o(1===r.width&&1===r.height)},r.src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="}};
+            grunticon( [ "/css/icons.data.svg.css", "/css/icons.data.png.css", "/css/icons.fallback.css" ] );
+        </script>
+        <noscript><link href="/css/icons.fallback.css" rel="stylesheet"></noscript>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+        <link rel="stylesheet" href="/css/app.css" />
+    </head>
+<body>
+
+    <div class="wrapper">
+
+        {>"header"/}
+
+        <section id="main">
+            {>"{viewName|s}"/}
+        </section>
+        <div class="spinner">
+            <div class="icon-loading-spin"></div>
+            <h4>Mmmmm...Tasty!</h4>
+        </div>
+        <section id="search">
+        </section>
+
+        {>"footer"/}
+
+    </div>
+
+    <script id="initialState" type="application/json">
+        {
+            "data": {data|js|s},
+            "viewMap": {viewMap|js|s}
+        }
+    </script>
+
+    <script src="/js/dist/common.js"></script>
+    <script src="/js/dist/index.js"></script>
+
+</body>
+</html>

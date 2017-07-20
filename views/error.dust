@@ -1,0 +1,7 @@
+{>"layout-error" /}
+
+{<body}
+    <h1>{message}</h1>
+    <p>{error.status}</p>
+    <pre>{error.stack}</pre>
+{/body}

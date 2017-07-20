@@ -1,0 +1,1 @@
+(function(){dust.register("footer",body_0);function body_0(chk,ctx){return chk.write("<footer class=\"footer\">&#169; 2014</footer>");}return body_0;})();

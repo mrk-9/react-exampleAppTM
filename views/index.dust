@@ -1,0 +1,33 @@
+<div class="container index">
+    <div class="row">
+        <div role="main">
+            <h1>Locations</h1>
+            <section class="local-locations">
+                {?data.localLocations}
+                    <h2><span class="glyphicon glyphicon-map-marker"></span> Near Me</h2>
+                    <ul class="list-unstyled city-list local clearfix">
+                        {#data.localLocations}
+                            <li style="background-image: url({fullScreen.url});">
+                                <a href="/locations/{slug}">
+                                    <h2>{name}</h2>
+                                </a>
+                            </li>
+                        {/data.localLocations}
+                    </ul>
+                {/data.localLocations}
+            </section>
+            <section class="top-locations">
+                <h2><span class="glyphicon glyphicon-signal"></span> Top</h2>
+                <ul class="list-unstyled city-list top clearfix">
+                    {#data.locations}
+                        <li style="background-image: url({fullScreen.url});">
+                            <a href="/locations/{slug}">
+                                <h2>{name}</h2>
+                            </a>
+                        </li>
+                    {/data.locations}
+                </ul>
+            </section>
+        </div>
+    </div>
+</div>
